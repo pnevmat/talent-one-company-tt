@@ -9,7 +9,6 @@ export default function IssuesAdder({ isVisible }) {
 
   const issueSendHandler = async () => {
     if (issueNameChange !== '' && issueDescriptionChange !== '') {
-      console.log('Issue send started');
       const octokit = new Octokit({
         auth: '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',
       });
@@ -26,7 +25,6 @@ export default function IssuesAdder({ isVisible }) {
           labels: [],
         },
       );
-      console.log('Add issue response: ', response);
     } else {
       alert('Issue name and issue description must not be empty');
     }

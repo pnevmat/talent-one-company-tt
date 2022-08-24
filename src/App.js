@@ -7,7 +7,6 @@ function App() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    console.log('use effect started and event listeners placed');
     const closeModalHandler = e => {
       if (e.code === 'Escape') {
         setIsVisible(false);
