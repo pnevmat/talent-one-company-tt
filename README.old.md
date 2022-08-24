@@ -1,1 +1,0 @@
-# talent-one-company-tt
