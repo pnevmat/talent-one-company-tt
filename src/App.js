@@ -8,8 +8,10 @@ function App() {
 
   useEffect(() => {
     console.log('use effect started and event listeners placed');
-    const closeModalHandler = () => {
-      setIsVisible(false);
+    const closeModalHandler = e => {
+      if (e.code === 'Escape') {
+        setIsVisible(false);
+      }
     };
 
     window.addEventListener('keydown', closeModalHandler);

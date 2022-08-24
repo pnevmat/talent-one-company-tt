@@ -32,3 +32,19 @@ Github.
 - [https://nodejs.org/en/](https://nodejs.org/en/)
 - [https://docs.github.com/en/rest/reference/issues](https://docs.github.com/en/rest/reference/issues)
 - [https://developer.chrome.com/docs/extensions/mv3/getstarted/](https://developer.chrome.com/docs/extensions/mv3/getstarted/)
+
+# Інструкція по використанню
+
+## Опис продукту
+
+Цей продукт є розширенням для браузера Google Chrome, яке дозволяє створювати
+issues у вашому репозиторії на GitHub.  
+Для його використання потрібно скачати це розширення з Google webstore або
+завантажити його у розпакованому вигляді з цього репозиторію.
+
+## Інструкція по використанню
+
+Після встановлення розширення ви можете перейти на будь-яку веб сторінку у
+вашому гугл хромі та натиснути клавіші CTRL+i, після цього вам відкриється попап
+де ви зможете ввести заголовок вашого issue та його опис. Далі натисніть кнопку
+"Send" і ваш issue буде створено у репозиторії GitHub.

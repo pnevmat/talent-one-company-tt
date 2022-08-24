@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Octokit } from '@octokit/core';
 
 import styles from './IssuesAdder.module.css';
 
@@ -6,9 +7,26 @@ export default function IssuesAdder({ isVisible }) {
   const [issueNameChange, setIssueNameChange] = useState('');
   const [issueDescriptionChange, setIssueDescriptionChange] = useState('');
 
-  const issueSendHandler = () => {
+  const issueSendHandler = async () => {
     if (issueNameChange !== '' && issueDescriptionChange !== '') {
       console.log('Issue send started');
+      const octokit = new Octokit({
+        auth: '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',
+      });
+
+      const response = await octokit.request(
+        'POST /repos/pnevmat/talent-one-company-tt/issues',
+        {
+          owner: 'pnevmat',
+          repo: 'talent-one-company-tt',
+          title: issueNameChange,
+          body: issueDescriptionChange,
+          assignees: [],
+          milestone: null,
+          labels: [],
+        },
+      );
+      console.log('Add issue response: ', response);
     } else {
       alert('Issue name and issue description must not be empty');
     }
