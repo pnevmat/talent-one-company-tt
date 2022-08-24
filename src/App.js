@@ -1,15 +1,24 @@
+import { useState, useEffect } from 'react';
+import IssuesAdder from './components/IssuesAdder';
+
 import './App.css';
 
 function App() {
-  return (
-    <div>
-			<label htmlFor="issu-name">Name of your issu</label>
-			<input type="text" name="issu-name" placeholder='Enter name of issu' />
-			<label htmlFor="issu-description">Description of your issu</label>
-			<input type="text" name="issu-description" placeholder='Enter description of issu' />
-			<button>Send</button>
-		</div>
-  );
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    console.log('use effect started and event listeners placed');
+    const closeModalHandler = () => {
+      setIsVisible(false);
+    };
+
+    window.addEventListener('keydown', closeModalHandler);
+    return () => {
+      window.removeEventListener('keydown', closeModalHandler);
+    };
+  }, []);
+
+  return <IssuesAdder isVisible={isVisible} />;
 }
 
 export default App;

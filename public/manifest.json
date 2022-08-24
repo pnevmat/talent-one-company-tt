@@ -1,6 +1,18 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
+  "name": "Issues adder",
+  "description": "Helps to create issues in GitHub repository outomaticaly",
   "version": "1.0",
-  "manifest_version": 3
+  "manifest_version": 3,
+	"action": {
+    "default_popup": "index.html"
+  },
+	"commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+I",
+        "mac": "MacCtrl+I"
+      },
+      "description": "Opens index.html"
+    }
+  }
 }
