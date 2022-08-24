@@ -13,7 +13,7 @@ export default function IssuesAdder({ isVisible }) {
         auth: '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',
       });
 
-      const response = await octokit.request(
+      await octokit.request(
         'POST /repos/pnevmat/talent-one-company-tt/issues',
         {
           owner: 'pnevmat',
