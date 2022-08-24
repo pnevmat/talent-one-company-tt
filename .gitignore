@@ -2,8 +2,15 @@
 
 # dependencies
 /node_modules
+/public
+/src
 /.pnp
 .pnp.js
+.json
+.md
+.old.md
+LICENCE
+.gitignore
 
 # testing
 /coverage
